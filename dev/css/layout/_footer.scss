@@ -1,0 +1,17 @@
+.footer__contact {
+    display: flex;
+    justify-content: flex-end;
+    gap: $space-s;
+    padding-top: $space-xl;
+    padding-bottom: $space;
+    a {
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: var(--link-color);
+        transition: color .33s ease;
+
+        &:hover {
+            color: $yellow-three;
+        }
+    }
+}

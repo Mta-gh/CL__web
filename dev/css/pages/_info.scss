@@ -1,0 +1,27 @@
+.page__info {
+    h2 {
+        font-size: 2.4rem;
+        line-height: 1;
+    }
+
+    p {
+        max-width: 66rem;
+    }
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    a {
+        text-decoration: none;
+        color: $blue;
+        font-size: 2.4rem;
+        transition: color .33s ease;
+
+        &:hover {
+            color: $yellow-three;
+        }
+    }
+}

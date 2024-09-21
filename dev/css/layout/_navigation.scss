@@ -1,0 +1,29 @@
+.main__nav {
+
+    padding: $space-xs 0;
+    width: 100%;
+    background: rgb(14, 14, 14);
+    backdrop-filter: blur(15px);
+    // border-radius: 0 0 4rem 4rem;
+}
+
+.nav__macro {
+    position: fixed;
+    top: 2.2rem;
+    right: 3.2rem;
+    display: flex;
+    gap: $space;
+    font-family: $font-primary;
+    font-size: 3.2rem;
+    mix-blend-mode: var(--blend-mode);
+
+    a {
+        color: $white;
+        color: var(--link-color);
+        transition: all .3s ease;
+
+        &:hover {
+            color: $yellow-three;
+        }
+    }
+}

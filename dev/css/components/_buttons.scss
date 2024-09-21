@@ -1,0 +1,22 @@
+.btn__fixed {
+    position: fixed;
+}
+
+.btn__big {
+    padding: 0 1rem;
+}
+
+.btn__rounded {
+    border-radius: 5px;
+    height: 4rem;
+}
+
+.btn__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 4rem;
+    height: 4rem;
+}
