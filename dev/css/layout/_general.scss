@@ -38,6 +38,8 @@ h4,
 h5,
 h6 {
     font-family: $font-primary;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 h1 {
@@ -110,7 +112,11 @@ a {
         .col__xl,
         .col__lg,
         .col__23  { grid-column: span 6; }
-        .col__md { grid-column: span 3; }
+        .col__md { 
+            grid-column: span 3; 
+
+            &.tablet__big { grid-column: span 6; }
+        }
         .col__sm { grid-column: span 2; }
 
         .col__xl {
@@ -118,6 +124,8 @@ a {
                 div { width: 100%;}
             }
         }
+
+        .col__space { display: none; }
     }
 
     @media only screen and (max-width: 768px) {
@@ -127,6 +135,10 @@ a {
         .col__xl,
         .col__lg,
         .col__md { grid-column: span 2; }
+
+        .col__md {
+            &.tablet__big { grid-column: span 2; }
+        }
  
         .col__sm { grid-column: span 1; }
 
@@ -174,4 +186,27 @@ ul {
         background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(164,255,0,1) 100%);
         opacity: .7;
     }
+}
+
+.section__works {
+    height: 80dvh;
+    h2 {
+        @extend %h4;
+        margin-bottom: $space-s;
+    }
+
+    h3 {
+        @extend %h5;
+        margin-bottom: $space-xs;
+    }
+}
+
+.work__info {
+    @extend %text-16;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
