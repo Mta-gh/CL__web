@@ -1,0 +1,26 @@
+.page__binding {
+    .section__container {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xxl;
+    }
+
+    .flex {
+        align-items: flex-start;
+    }
+
+    @media only screen and (max-width: 1400px) {
+        .section__container { gap: $space-l; }
+    }
+    
+
+    @media only screen and (max-width: 986px) {
+        .grid__swipers { order: 1; }
+        .section__container { gap: $space-m; }
+    }
+}
+
+.text__wrapper {
+    padding-top: 1.6rem;
+    height: fit-content;
+}

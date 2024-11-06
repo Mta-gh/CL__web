@@ -51,6 +51,10 @@ $font-secondary: 'ClashGrotesk-Variable';
 %h1 {
     font-size: 8rem;
     line-height: 1.6;
+
+    @media only screen and (max-width: 986px) {
+        font-size: 6.4rem;
+    }
 }
 
 %h2 {

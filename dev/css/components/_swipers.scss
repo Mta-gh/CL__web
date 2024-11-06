@@ -1,19 +1,26 @@
 .swiper__binding {
-    height: 100%;
-    max-height: 80rem;
-    .swiper-slide {
-        // aspect-ratio: 1/1;
-    }
-
+    // height: 100%;
+    // max-height: 80rem;
+    aspect-ratio: 4/3;
     .img__container { height: 100%; }
 }
 
 .grid__swipers {
     display: flex;
+    align-items: flex-start;
     gap: $space;
+    height: fit-content;
 
     .flex__col {
         width: 100%;
-        max-width: 50%;
+        max-width: 48.5%;
+    }
+
+    
+    @media only screen and (max-width: 1400px) {
+        flex-direction: column;
+        .flex__col {
+            max-width: 100%;
+        }
     }
 }

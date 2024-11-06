@@ -155,7 +155,7 @@ ul {
     padding-top: $space-xxl;
 
     @media only screen and (max-width: 768px) {
-        padding-top: $space-l;
+        padding-top: $space-xl;
     }
 }
 
@@ -189,7 +189,8 @@ ul {
 }
 
 .section__works {
-    height: 80dvh;
+    height: 100%;
+    // min-height: 60dvh;
     h2 {
         @extend %h4;
         margin-bottom: $space-s;
@@ -208,5 +209,4 @@ ul {
 .flex {
     display: flex;
     justify-content: center;
-    align-items: center;
 }

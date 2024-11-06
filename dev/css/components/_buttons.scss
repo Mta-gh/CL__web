@@ -20,3 +20,20 @@
     width: 4rem;
     height: 4rem;
 }
+
+.btn__swiper {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    font-size: 2.4rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.swiper__next {
+    right: .66rem;
+}
+
+.swiper__prev {
+    left: .66rem;
+}

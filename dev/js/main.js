@@ -66,8 +66,8 @@ function initSwipers(i) {
     const swiper = new Swiper(i, {
         loop: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper__next',
+            prevEl: '.swiper__prev',
         },
     });
 }
@@ -75,20 +75,22 @@ function initSwipers(i) {
 function initSwipers(i) {
     const swiperOne = new Swiper('.swiper__left', {
         loop: true,
+        slidesPerView: 1,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper__next',
+            prevEl: '.swiper__prev',
         },
     });
 
     const swiperTwo = new Swiper('.swiper__right', {
         loop: true,
+        slidesPerView: 1,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper__next',
+            prevEl: '.swiper__prev',
         },
     });
 
-    swiperOne.controller.control = swiperTwo;
-    swiperTwo.controller.control = swiperOne;   
+    // swiperOne.controller.control = swiperTwo;
+    // swiperTwo.controller.control = swiperOne;   
 }
