@@ -45,10 +45,20 @@ function init() {
     ]
 });
 
-function updateTheme(container) {
-    const colour = container.dataset.colour;
-    document.querySelector('html').setAttribute('data-theme', colour)
-}
+    function updateTheme(container) {
+        const colour = container.dataset.colour;
+        document.querySelector('html').setAttribute('data-theme', colour)
+    }
+
+    $('.super__fluid').on('click', function (event) {
+        event.preventDefault();
+        let menu = $(this).data('menu');
+        let plane = $('.super__plane[data-menu="' + menu + '"]');
+        $('.super__plane').not(plane).removeClass('active');
+        plane.toggleClass('active');
+    });
+    
+    
 }
 init()
 

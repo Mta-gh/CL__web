@@ -25,15 +25,50 @@
     position: absolute;
     z-index: 3;
     top: 50%;
-    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    font-size: 3.2rem;
     cursor: pointer;
     transform: translateY(-50%);
+    height: 100%;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+
+    span {
+        position: relative;
+        z-index: 3;
+    }
+    
+    &:hover {
+        &:before {
+            opacity: 1;
+        }
+    }
 }
 
 .swiper__next {
-    right: .66rem;
+    right: 0;
+    padding-right: .66rem;
+
+    &::before {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(164,255,0,1) 100%);
+    }
 }
 
 .swiper__prev {
-    left: .66rem;
+    left: 0;
+    padding-left: .66rem;
+
+    &::before {
+        background: linear-gradient(90deg, rgba(164,255,0,1) 0, rgba(255, 255, 255, 0) 100%);
+    }
 }

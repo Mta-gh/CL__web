@@ -44,6 +44,7 @@ h6 {
 
 h1 {
     @extend %h1;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -75,6 +76,8 @@ a {
     text-decoration: none;
 }
 
+strong { font-weight: 600; }
+
 .grid__layout {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
@@ -94,6 +97,7 @@ a {
         grid-column: span 12;}
     .col__md { grid-column: span 8; }
     .col__sm { grid-column: span 6; }
+    .col__s { grid-column: span 4; }
     
     @media only screen and (max-width: 1900px) {
         grid-template-columns: repeat(12, 1fr);
@@ -102,7 +106,8 @@ a {
         .col__23 { grid-column: span 8; }
         .col__lg { grid-column: span 6; }
         .col__md { grid-column: span 4; }
-        .col__sm { grid-column: span 3; }
+        .col__sm,
+        .col__s { grid-column: span 3; }
     }
 
     @media only screen and (max-width: 986px) {
@@ -117,7 +122,8 @@ a {
 
             &.tablet__big { grid-column: span 6; }
         }
-        .col__sm { grid-column: span 2; }
+        .col__sm,
+        .col__s { grid-column: span 2; }
 
         .col__xl {
             &.centred {
@@ -140,7 +146,8 @@ a {
             &.tablet__big { grid-column: span 2; }
         }
  
-        .col__sm { grid-column: span 1; }
+        .col__sm,
+        .col__s { grid-column: span 1; }
 
         .col__space { display: none; }
     }
@@ -203,7 +210,12 @@ ul {
 }
 
 .work__info {
-    @extend %text-16;
+    @extend %text-18;
+}
+
+.info__wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .flex {

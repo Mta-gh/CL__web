@@ -60,21 +60,41 @@ $font-secondary: 'ClashGrotesk-Variable';
 %h2 {
     font-size: 6.4rem;
     line-height: 1;
+
+    @media only screen and (max-width: 986px) {
+        font-size: 4.8rem;
+    }
+
+    @media only screen and (max-width: 760px) {
+        font-size: 3.2rem;
+    }
 }
 
 %h3 {
     font-size: 5.6rem;
     line-height: 1;
+
+    @media only screen and (max-width: 986px) {
+        font-size: 4.8rem;
+    }
 }
 
 %h4 {
     font-size: 4.8rem;
     line-height: 1;
+
+    @media only screen and (max-width: 986px) {
+        font-size: 3.2rem;
+    }
 }
 
 %h5 {
     font-size: 3.2rem;
     line-height: 1;
+
+    @media only screen and (max-width: 986px) {
+        font-size: 2.4rem;
+    }
 }
 
 %h6 {

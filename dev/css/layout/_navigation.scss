@@ -11,7 +11,7 @@
     position: fixed;
     top: 2.2rem;
     right: 3.2rem;
-    z-index: 333;
+    z-index: 999;
     display: flex;
     gap: $space;
     font-family: $font-primary;
@@ -25,6 +25,68 @@
 
         &:hover {
             color: $yellow-three;
+        }
+    }
+}
+
+.nav__rhizome {
+    position: fixed;
+    z-index: 999;
+    top: 2.2rem;
+    left: 3.2rem;
+    display: flex;
+    align-items: center;
+    gap: $space;
+    transition: all .33s ease;
+
+    img {
+        width: 5rem;
+    }
+
+    a {
+    transition: all .33s ease;
+
+    img { 
+        transition: all .33s ease;
+    }
+        &:hover {
+            filter: blur(1px) brightness(1.5);
+            // transform: scaleX(1.2);
+
+            img {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+.super__plane {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    padding: $space-xxl $space $space;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: all .33s ease;
+    backdrop-filter: blur(10px);
+
+    &.active {
+        opacity: 1;
+        z-index: 333;
+    }
+}
+
+.plane__menu {
+    a {
+        @extend %h2;
+        color: $black;
+        transition: all .33s ease;
+
+        &:hover {
+            color: $blue;
         }
     }
 }
